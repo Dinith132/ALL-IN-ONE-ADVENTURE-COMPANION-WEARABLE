@@ -7,9 +7,8 @@ Key features include:
 - **Health Monitoring:** Real-time tracking of heart rate and oxygen levels with the MAX30102/MAX30100 sensor.
 - **Navigation:** Accurate location tracking with the NEO-6M GPS module.
 - **Communication:** Long-distance connectivity with the NRF24L01+PA+LNA module and integrated audio components for seamless communication.
-- **Additional Features:** OLED display for easy readability, vibration motor for silent notifications, and LED indicators for enhanced usability.
+- **Additional Features:** OLED display for easy readability, and LED indicators for enhanced usability.
 
-Built to withstand harsh environments, this lightweight wearable is waterproof, shock-resistant, and durable—making it the perfect companion for every adventure.
 
 ---
 
@@ -28,8 +27,6 @@ The wearable features a compact and efficient circuit design to integrate all co
 
 #### Circuit Diagram
 
-#### Circuit Diagram
-
 ![Circuit Diagram](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/Circuit%20image.png)
 *Figure 1: Complete circuit diagram of the All-in-One Adventure Companion Wearable.*
 
@@ -38,8 +35,6 @@ The wearable features a compact and efficient circuit design to integrate all co
 
 ![Schematic Diagram](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/d84f2aab8f3bdcc224ee544cc9a6a3f7b5ed19e5/design/Schematic%20Diagram.png)
 *Figure 3: Schematic diagram with detailed labels for each component.*
-
-*Include a detailed schematic with clear labels for each component.*
 
 ---
 
@@ -53,17 +48,14 @@ The wearable features a compact and efficient circuit design to integrate all co
 - Electret Condenser Microphone
 - Permanent Magnet Speaker
 - OLED Display
-- DC Vibration Motor
 
 ### Software:
-- **Arduino IDE**: For programming and uploading code to the ESP32.
-- **Fritzing**: For circuit diagram design.
-- **Eagle**: For PCB design.
-- **PlatformIO**: For advanced software development and debugging.
+- **Altium Designer**: For circuit diagram design.
+- **EasyEDA Online PCB design & circuit simulator**: For circuit diagram design and PCB design.
+- **ESP-IDF**: For build and upload code to your ESP32
 
 ### Frameworks:
-- ESP-IDF (Espressif IoT Development Framework)
-- FreeRTOS for ESP32
+- ESP-IDF (For build and upload code to your ESP32)
 
 ---
 
