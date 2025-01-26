@@ -30,8 +30,7 @@ The wearable features a compact and efficient circuit design to integrate all co
 
 ![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/Circuit%20image.png)
 ![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
-![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
-![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
+![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/d84f2aab8f3bdcc224ee544cc9a6a3f7b5ed19e5/design/Schematic%20Diagram.png)
 
 *Include a detailed schematic with clear labels for each component.*
 
