@@ -28,9 +28,16 @@ The wearable features a compact and efficient circuit design to integrate all co
 
 #### Circuit Diagram
 
-![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/Circuit%20image.png)
-![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
-![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/d84f2aab8f3bdcc224ee544cc9a6a3f7b5ed19e5/design/Schematic%20Diagram.png)
+#### Circuit Diagram
+
+![Circuit Diagram](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/Circuit%20image.png)
+*Figure 1: Complete circuit diagram of the All-in-One Adventure Companion Wearable.*
+
+![3D View of PCB Design](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
+*Figure 2: 3D rendered view of the PCB design.*
+
+![Schematic Diagram](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/d84f2aab8f3bdcc224ee544cc9a6a3f7b5ed19e5/design/Schematic%20Diagram.png)
+*Figure 3: Schematic diagram with detailed labels for each component.*
 
 *Include a detailed schematic with clear labels for each component.*
 
