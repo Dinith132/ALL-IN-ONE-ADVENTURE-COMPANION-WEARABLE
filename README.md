@@ -7,7 +7,7 @@ Key features include:
 - **Health Monitoring:** Real-time tracking of heart rate and oxygen levels with the MAX30102/MAX30100 sensor.
 - **Navigation:** Accurate location tracking with the NEO-6M GPS module.
 - **Communication:** Long-distance connectivity with the NRF24L01+PA+LNA module and integrated audio components for seamless communication.
-- **Additional Features:** OLED display for easy readability, and LED indicators for enhanced usability.
+- **Additional Features:** OLED display for easy readability, vibration motor for silent notifications, and LED indicators for enhanced usability.
 
 Built to withstand harsh environments, this lightweight wearable is waterproof, shock-resistant, and durable—making it the perfect companion for every adventure.
 
@@ -27,7 +27,8 @@ The wearable features a compact and efficient circuit design to integrate all co
 8. **OLED Display (0.96” 128X64)**: Displays health, navigation, and communication data.
 
 #### Circuit Diagram
-![Circuit Diagram](https://drive.google.com/file/d/1dnClkqRDui9AMM6XrjJy2LuvMDOQx8pD/view?usp=drive_link)
+[View Circuit Diagram](https://drive.google.com/file/d/1dnClkqRDui9AMM6XrjJy2LuvMDOQx8pD/view?usp=drive_link)
+
 *Include a detailed schematic with clear labels for each component.*
 
 ---
