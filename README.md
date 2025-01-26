@@ -58,10 +58,10 @@ The wearable features a compact and efficient circuit design to integrate all co
 ### Software:
 - **Altium Designer**: For circuit diagram design.
 - **EasyEDA Online PCB design & circuit simulator**: For circuit diagram design and PCB design.
-- **ESP-IDF**: For build and upload code to your ESP32
+- **ESP-IDF**: For build and upload code to ESP32
 
 ### Frameworks:
-- ESP-IDF (For build and upload code to your ESP32)
+- ESP-IDF (For build and upload code to ESP32)
 
 ---
 
