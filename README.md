@@ -87,15 +87,6 @@ The wearable features a compact and efficient circuit design to integrate all co
 
 ---
 
-## How to Contribute
-Contributions are welcome! To contribute:
-1. Fork this repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes with detailed messages.
-4. Submit a pull request for review.
-
----
-
 ## Contact
 For further inquiries, contact us at dinithp132@gmail.com.
 
