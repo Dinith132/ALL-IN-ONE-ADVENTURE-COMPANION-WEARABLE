@@ -11,7 +11,7 @@ Key features include:
 
 
 ---
-
+ 
 ## Circuit Design
 The wearable features a compact and efficient circuit design to integrate all components seamlessly. 
 
@@ -41,13 +41,19 @@ The wearable features a compact and efficient circuit design to integrate all co
 ## Technologies Used
 
 ### Hardware:
-- NRF24L01+PA+LNA Module
-- MAX30102/MAX30100 Heart Rate Sensor
-- NEO-6M GPS Module
-- ESP32 WROOM-32U Development Board
-- Electret Condenser Microphone
-- Permanent Magnet Speaker
-- OLED Display
+-MAX30102/MAX30100 Heart Rate Oxygen Pulse Sensor
+-Mini Ublox NEO-6M GPS Module with Antenna
+-MAX9814 Microphone Amplifier
+-ESP32 38Pin WROOM-32U Bluetooth BLE and WIFI Development Board with U.FL Antenna Connector
+-NRF24L01+PA+LNA Module Long Distance 1100M 
+-OLED Display 0.96″ White 128X64 IIC I2C DC 3V-5V SPI 
+-AMS1117-3.3V SMD Voltage Regulator 
+-LM7805 L7805 Voltage Regulator IC 5V 1.2A 
+-LM741 Op-Amp 
+-Permanent Magnet Speaker
+-LED, Button
+-Capacitors, Resistors
+
 
 ### Software:
 - **Altium Designer**: For circuit diagram design.
@@ -77,8 +83,7 @@ The wearable features a compact and efficient circuit design to integrate all co
 - **Wijedasa M.M.D.P**: Software Development and Documentation 
 
 ### Mentors:
-- **: Guidance on hardware integration and circuit design.
-- *[Mentor Name]*: Software development and debugging support.
+- *Nishankar S.*-Lecturer on University of Jaffna 
 
 ---
 
