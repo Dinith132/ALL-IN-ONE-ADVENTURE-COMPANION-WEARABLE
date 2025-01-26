@@ -92,5 +92,5 @@ Contributions are welcome! To contribute:
 ---
 
 ## Contact
-For further inquiries, contact us at [dinithp132@gmail.com].
+For further inquiries, contact us at dinithp132@gmail.com.
 
