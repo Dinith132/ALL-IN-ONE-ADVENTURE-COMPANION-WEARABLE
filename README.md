@@ -66,5 +66,5 @@ The wearable is ideal for:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/adventure-companion-wearable.git
-   cd adventure-companion-wearable
+   git clone https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE.git
+   cd ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE
