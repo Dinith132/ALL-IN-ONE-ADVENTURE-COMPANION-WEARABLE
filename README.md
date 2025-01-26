@@ -71,13 +71,13 @@ The wearable features a compact and efficient circuit design to integrate all co
 ## Team & Mentors
 
 ### Team Members:
-- **Weerasinghe D.K.D**: Software Development and Documentation (2021/E/024)
-- **Hettiarachchi H.P.M**: PCB Design and Circuit Design (2021/E/051)
-- **Perera W.A.C.D**: PCB Design and Circuit Design (2021/E/175)
-- **Wijedasa M.M.D.P**: Software Development and Documentation (2021/E/188)
+- **Weerasinghe D.K.D**: Software Development and Documentation 
+- **Hettiarachchi H.P.M**: PCB Design and Circuit Design 
+- **Perera W.A.C.D**: PCB Design and Circuit Design 
+- **Wijedasa M.M.D.P**: Software Development and Documentation 
 
 ### Mentors:
-- *[Mentor Name]*: Guidance on hardware integration and circuit design.
+- **: Guidance on hardware integration and circuit design.
 - *[Mentor Name]*: Software development and debugging support.
 
 ---
