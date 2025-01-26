@@ -27,7 +27,11 @@ The wearable features a compact and efficient circuit design to integrate all co
 8. **OLED Display (0.96” 128X64)**: Displays health, navigation, and communication data.
 
 #### Circuit Diagram
-[View Circuit Diagram](https://drive.google.com/file/d/1dnClkqRDui9AMM6XrjJy2LuvMDOQx8pD/view?usp=drive_link)
+
+![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
+![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
+![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
+![image alt](https://github.com/Dinith132/ALL-IN-ONE-ADVENTURE-COMPANION-WEARABLE/blob/87509a178b6350792eec762ce333d4cd9c8d5785/design/3D%20view.PNG)
 
 *Include a detailed schematic with clear labels for each component.*
 
