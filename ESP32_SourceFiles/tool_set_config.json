@@ -1,0 +1,21 @@
+[
+  {
+    "id": 0,
+    "idfLocation": "C:/esp/esp-idf-v5.4/",
+    "idfVersion": "5.4.0",
+    "active": true,
+    "systemGitExecutablePath": "C:/Users/panka/Espressif/tools/idf-git/2.44.0/cmd/git.exe",
+    "systemPythonExecutablePath": "C:/Users/panka/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe",
+    "envVars": {
+      "PATH": "C:\\Users\\panka\\Espressif\\tools\\xtensa-esp-elf-gdb\\14.2_20240403\\xtensa-esp-elf-gdb\\bin;C:\\Users\\panka\\Espressif\\tools\\riscv32-esp-elf-gdb\\14.2_20240403\\riscv32-esp-elf-gdb\\bin;C:\\Users\\panka\\Espressif\\tools\\xtensa-esp-elf\\esp-14.2.0_20241119\\xtensa-esp-elf\\bin;C:\\Users\\panka\\Espressif\\tools\\esp-clang\\esp-18.1.2_20240912\\esp-clang\\bin;C:\\Users\\panka\\Espressif\\tools\\riscv32-esp-elf\\esp-14.2.0_20241119\\riscv32-esp-elf\\bin;C:\\Users\\panka\\Espressif\\tools\\esp32ulp-elf\\2.38_20240113\\esp32ulp-elf\\bin;C:\\Users\\panka\\Espressif\\tools\\cmake\\3.30.2\\bin;C:\\Users\\panka\\Espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20241016\\openocd-esp32\\bin;C:\\Users\\panka\\Espressif\\tools\\ninja\\1.12.1\\;C:\\Users\\panka\\Espressif\\tools\\idf-exe\\1.0.3\\;C:\\Users\\panka\\Espressif\\tools\\ccache\\4.10.2\\ccache-4.10.2-windows-x86_64;C:\\Users\\panka\\Espressif\\tools\\dfu-util\\0.11\\dfu-util-0.11-win64;C:\\Users\\panka\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts;C:\\esp\\esp-idf-v5.4\\tools;%PATH%",
+      "IDF_COMPONENT_MANAGER": "1",
+      "OPENOCD_SCRIPTS": "C:\\Users\\panka\\Espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20241016\\openocd-esp32\\share\\openocd\\scripts",
+      "IDF_DEACTIVATE_FILE_PATH": "C:\\Users\\panka\\AppData\\Local\\Temp\\tmplp72r5svidf_6104",
+      "IDF_MAINTAINER": "1",
+      "IDF_CCACHE_ENABLE": "1",
+      "IDF_PYTHON_ENV_PATH": "C:\\Users\\panka\\Espressif\\python_env\\idf5.4_py3.11_env",
+      "ESP_IDF_VERSION": "5.4.0",
+      "ESP_ROM_ELF_DIR": "C:\\Users\\panka\\Espressif\\tools\\esp-rom-elfs\\20241011\\"
+    }
+  }
+]
