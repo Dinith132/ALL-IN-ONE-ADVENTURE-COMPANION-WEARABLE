@@ -100,7 +100,7 @@ class _MainScreenState extends State<MainScreen> {
           ),
           const Divider(),
           if (scanResults.isEmpty)
-        const Center(child: Text("No devices"))
+        const Center(child: Text("No devices Found"))
           else
         for (var (index, result) in scanResults.indexed)
           ListTile(
