@@ -3,6 +3,8 @@
 ## Overview
 This project tests the functionality of a GPS module connected to an ESP32 using UART communication. The program reads NMEA sentences from the GPS module and logs them using ESP-IDF.
 
+For additional ESP-IDF libraries and resources, refer to [ESP-IDF Libraries](https://github.com/pankaja2328/ESP-IDF-Libraries.git).
+
 ## Hardware Requirements
 - **ESP32 development board**
 - **NEO-6M GPS module** (or any compatible GPS module)
