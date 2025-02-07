@@ -57,6 +57,22 @@ class _DeviceScreenState extends State<DeviceScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(" ${widget.connection.address}"),
+         actions: [
+            // Add an IconButton to the AppBar's actions list
+            IconButton(
+              icon: Icon(Icons.settings),
+              onPressed: () {
+                // Define your action here, for example:
+                print('Settings button pressed');
+              },
+            ),
+          ],
+       
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+        },
+        child: Icon(Icons.add),
       ),
       body: ListView(
         children: [
@@ -97,21 +113,27 @@ class _DeviceScreenState extends State<DeviceScreen> {
                   ),],
             ),
           ),
-          TextField(
-            controller: _controller,
-            decoration: InputDecoration(
-              labelText: 'Enter message',
+            Row(
+            children: [
+              Expanded(
+              child: TextField(
+                controller: _controller,
+                decoration: InputDecoration(
+                labelText: 'Enter message',
+                ),
+              ),
+              ),
+              SizedBox(width: 16.0),
+              ElevatedButton(
+              onPressed: () {
+                String message = _controller.text;
+                _sendMessage(message);
+                _controller.clear();
+              },
+              child: const Text("Send"),
+              ),
+            ],
             ),
-          ),
-          SizedBox(height: 16.0),
-          ElevatedButton(
-            onPressed: () {
-              String message = _controller.text;
-              _sendMessage(message);
-              _controller.clear();
-            },
-            child: const Text("Send message"),
-          ),
           const Divider(),
         ],
       ),
