@@ -7,7 +7,7 @@ import 'package:flutter_blue_classic_example/device_screen.dart';
 
 void main() {
   runApp(const MyApp());
-}
+}   
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -86,14 +86,20 @@ class _MainScreenState extends State<MainScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AIO'),
-        backgroundColor: const Color.fromARGB(255, 123, 124, 125),
+        title: const Text('BT Terminal'),
+        backgroundColor: const Color.fromARGB(255, 234, 234, 234),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: ListView(
         children: [
           ListTile(
         title: const Text("Bluetooth "),
-        subtitle: const Text("Tap to enable..."),
+        subtitle: const Text("Tap to enable.."),
         trailing: Text(_adapterState.name),
         leading: const Icon(Icons.bluetooth, color: Colors.blue),
         onTap: () => _flutterBlueClassicPlugin.turnOn(),
@@ -148,7 +154,7 @@ class _MainScreenState extends State<MainScreen> {
         },
         label: Text(_isScanning ? "Scanning" : "Scan"),
         icon: Icon(_isScanning ? Icons.bluetooth_searching : Icons.bluetooth),
-        backgroundColor: Colors.grey,
+        backgroundColor: const Color.fromARGB(255, 224, 224, 224),
       ),);
   }
 }

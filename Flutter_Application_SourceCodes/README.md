@@ -30,7 +30,7 @@ flutter pub get
 ### 3. Connect a Physical Device or Emulator
 Ensure your Android device is connected via USB with developer mode enabled.
 
-### 4. Run the Application
+### 4. Run the Application 
 ```bash
 flutter run
 ```

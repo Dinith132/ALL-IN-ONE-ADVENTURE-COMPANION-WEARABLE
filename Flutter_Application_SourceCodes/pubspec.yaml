@@ -12,6 +12,11 @@ dependencies:
     sdk: flutter
 
   flutter_blue_classic: ^0.0.4
+  flutter_map: ^8.0.0
+  latlong2: ^0.9.1
+  # mbtiles_image_provider: ^0.1.0
+
+  # google_maps_flutter: ^2.1.1
     # When depending on this package from a real application you should use:
     #   flutter_blue_classic: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints
@@ -29,3 +34,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/map.mbtiles

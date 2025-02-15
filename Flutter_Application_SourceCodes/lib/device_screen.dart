@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_classic/flutter_blue_classic.dart';
+import 'package:flutter_blue_classic_example/map_page.dart';
 
 class DeviceScreen extends StatefulWidget {
   const DeviceScreen({super.key, required this.connection});
@@ -16,6 +17,7 @@ class DeviceScreen extends StatefulWidget {
 
 class _DeviceScreenState extends State<DeviceScreen> {
   TextEditingController _controller = TextEditingController();
+  ScrollController _scrollController = ScrollController();
   StreamSubscription? _readSubscription;
   final List<Map<String, String>> _messages = [];
 
@@ -23,7 +25,10 @@ class _DeviceScreenState extends State<DeviceScreen> {
   void initState() {
     _readSubscription = widget.connection.input?.listen((event) {
       if (mounted) {
-        setState(() => _messages.add({'sender': 'device', 'message': utf8.decode(event)}));
+        setState(() {
+          _messages.add({'sender': 'device', 'message': utf8.decode(event)});
+          _scrollToBottom();
+        });
       }
     });
     super.initState();
@@ -33,12 +38,14 @@ class _DeviceScreenState extends State<DeviceScreen> {
   void dispose() {
     widget.connection.dispose();
     _readSubscription?.cancel();
+    _scrollController.dispose();
     super.dispose();
   }
 
   void _sendMessage(String message) {
     setState(() {
       _messages.add({'sender': 'user', 'message': message});
+      _scrollToBottom();
     });
     try {
       widget.connection.writeString(message);
@@ -52,88 +59,100 @@ class _DeviceScreenState extends State<DeviceScreen> {
     }
   }
 
+  void _scrollToBottom() {
+    _scrollController.animateTo(
+      _scrollController.position.maxScrollExtent,
+      duration: Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(" ${widget.connection.address}"),
-         actions: [
-            // Add an IconButton to the AppBar's actions list
-            IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () {
-                // Define your action here, for example:
-                print('Settings button pressed');
-              },
+        backgroundColor: const Color.fromARGB(255, 234, 234, 234),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.map),
+                        onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MapPage()),
+              );
+            },
             ),
-          ],
-       
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-        },
-        child: Icon(Icons.add),
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {},
+            
+          ),
+        ],
+
       ),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Text(
-              "Terminal",
+              "Chats",
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           Container(
-            height: 560.0, // Set the height of the box
+            height: 629.0,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey),
               borderRadius: BorderRadius.circular(5.0),
             ),
             child: ListView(
+              controller: _scrollController,
               children: [
                 for (var message in _messages)
                   Align(
-                  alignment: message['sender'] == 'user'
-                    ? Alignment.centerRight
-                    : Alignment.centerLeft,
-                  child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                    margin: EdgeInsets.symmetric(vertical: 4),
-                    decoration: BoxDecoration(
-                    color: message['sender'] == 'user'
-                      ? Colors.blue[100]
-                      : Colors.grey[300],
-                    borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Text(
-                    message['message']!,
-                    style: TextStyle(fontSize: 18), // Increased font size
+                    alignment: message['sender'] == 'user'
+                        ? Alignment.centerRight
+                        : Alignment.centerLeft,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                      margin: EdgeInsets.symmetric(vertical: 4),
+                      decoration: BoxDecoration(
+                        color: message['sender'] == 'user'
+                            ? Colors.blue[100]
+                            : Colors.grey[300],
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: message['message']!=null&&message['message']!.isNotEmpty
+                          ?Text(message['message']!,style:TextStyle(fontSize:18))
+                          :SizedBox(),
+
                     ),
                   ),
-                  ),],
+              ],
             ),
           ),
-            Row(
+          Row(
             children: [
               Expanded(
-              child: TextField(
-                controller: _controller,
-                decoration: InputDecoration(
-                labelText: 'Enter message',
+                child: TextField(
+                  controller: _controller,
+                  decoration: InputDecoration(
+                    labelText: 'Enter message',
+                  ),
                 ),
-              ),
               ),
               SizedBox(width: 16.0),
               ElevatedButton(
-              onPressed: () {
-                String message = _controller.text;
-                _sendMessage(message);
-                _controller.clear();
-              },
-              child: const Text("Send"),
+                onPressed: () {
+                  String message = _controller.text;
+                  _sendMessage(message);
+                  _controller.clear();
+                },
+                child: const Text("Send"),
               ),
             ],
-            ),
+          ),
           const Divider(),
         ],
       ),
