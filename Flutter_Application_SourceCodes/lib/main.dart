@@ -93,7 +93,7 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           ListTile(
         title: const Text("Bluetooth "),
-        subtitle: const Text("Tap to enable.."),
+        subtitle: const Text("Tap to enable..."),
         trailing: Text(_adapterState.name),
         leading: const Icon(Icons.bluetooth, color: Colors.blue),
         onTap: () => _flutterBlueClassicPlugin.turnOn(),
