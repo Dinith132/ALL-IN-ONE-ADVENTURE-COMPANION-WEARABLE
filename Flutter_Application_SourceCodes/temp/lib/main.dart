@@ -1,5 +1,3 @@
-//dont know branch
-
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
@@ -42,11 +40,10 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
-    
     super.initState();
     initPlatformState();
   }
-    
+
   Future<void> initPlatformState() async {
     BluetoothAdapterState adapterState = _adapterState;
 

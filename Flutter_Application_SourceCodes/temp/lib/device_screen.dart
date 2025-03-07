@@ -4,10 +4,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_classic/flutter_blue_classic.dart';
-import 'package:flutter_blue_classic_example/database_page.dart';
 import 'package:flutter_blue_classic_example/map_page.dart';
-import 'package:flutter_blue_classic_example/medical_records_page.dart';
-import 'database_helper.dart';
 
 class DeviceScreen extends StatefulWidget {
   const DeviceScreen({super.key, required this.connection});
@@ -22,77 +19,19 @@ class _DeviceScreenState extends State<DeviceScreen> {
   TextEditingController _controller = TextEditingController();
   ScrollController _scrollController = ScrollController();
   StreamSubscription? _readSubscription;
-  List<Map<String, dynamic>> _messages = [];
-  Map<String ,dynamic> _data_last={};
-  Map<String, dynamic> _msg = {};
-  String out_msg=""; // New map variable to store 'our_location'
-  Map<String , dynamic> temp={};
-
+  final List<Map<String, String>> _messages = [];
 
   @override
   void initState() {
-    super.initState();
-    _loadMessages();
     _readSubscription = widget.connection.input?.listen((event) {
       if (mounted) {
         setState(() {
-          _storeMessage({'sender': 'device', 'message': utf8.decode(event)});
+          _messages.add({'sender': 'device', 'message': utf8.decode(event)});
           _scrollToBottom();
         });
       }
     });
-  }
-
-  Future<void> _loadMessages() async {
-    _messages = await DatabaseHelper().getMessages();
-    setState(() {});
-  }
-
-  Future<void> _storeMessage(Map<String, String> message) async {
-    await DatabaseHelper().insertMessage(message);
-    _messages = await DatabaseHelper().getMessages();
-    setState(() {});
-  }
-
-  Future<void> _clearMessages() async {
-    await DatabaseHelper().clearMessages();
-    _messages = [];
-    setState(() {});
-  }
-
-    Future<void> _loaddata(String m) async {
-      // Map<String , dynamic> temp=json.decode(m);
-        try {
-          Map<String, dynamic> temp = json.decode(m);
-          // Process the decoded JSON data
-        } catch (e) {
-          if (kDebugMode) {
-            print('Error decoding JSON: $e');
-          }
-          // Skip the message if it is not in JSON format
-        }
-
-
-    // var lastMessage = await DatabaseHelper().getLastMessage();
-    // if (lastMessage == null) return;
-
-    // if (mounted ) {
-    //   final_msg=lastMessage;
-    //     setState(() {
-    //       _data_last = lastMessage;
-    //       if (_data_last.containsKey('message')) {
-    //         _msg = json.decode(_data_last['message']); // Decode JSON string
-    //         if (_msg.containsKey('message')) {
-    //           out_msg = _msg['message']['text'];
-    //           print('Loaded location: $out_msg');
-    //          // Debug print
-    //         } else {
-    //           print('No our_location data found in the message'); // Debug print
-    //         }
-
-    //     }
-    //   });
-    // }
+    super.initState();
   }
 
   @override
@@ -105,7 +44,7 @@ class _DeviceScreenState extends State<DeviceScreen> {
 
   void _sendMessage(String message) {
     setState(() {
-      _storeMessage({'sender': 'user', 'message': message});
+      _messages.add({'sender': 'user', 'message': message});
       _scrollToBottom();
     });
     try {
@@ -137,32 +76,20 @@ class _DeviceScreenState extends State<DeviceScreen> {
         actions: [
           IconButton(
             icon: Icon(Icons.map),
-            onPressed: () {
+                        onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const MapPage()),
               );
             },
-          ),
-          IconButton(
-            icon: Icon(Icons.medical_information),
-                        onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const MedicalRecordsPage()),
-              );
-            },
             ),
           IconButton(
-            icon: Icon(Icons.more),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const DatabasePage()),
-              );
-            },
+            icon: Icon(Icons.settings),
+            onPressed: () {},
+            
           ),
         ],
+
       ),
       body: ListView(
         children: [
@@ -196,28 +123,10 @@ class _DeviceScreenState extends State<DeviceScreen> {
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: () {
-                        if (message['message'] != null && message['message']!.isNotEmpty) {
+                      child: message['message']!=null&&message['message']!.isNotEmpty
+                          ?Text(message['message']!,style:TextStyle(fontSize:18))
+                          :SizedBox(),
 
-                                  try {
-                                      Map<String, dynamic> temp = jsonDecode(message['message']!);
-                                      print(temp['message']['text']);
-
-                                      return Text(temp['message']['text'], style: TextStyle(fontSize: 18));
-                                      // Process the decoded JSON data
-                                    } catch (e) {
-                                      if (kDebugMode) {
-                                        print('Error decoding JSON: $e');
-                                      }
-                                      // return Text("=========================", style: TextStyle(fontSize: 18));
-                                      // Skip the message if it is not in JSON format
-                                    }
-
-                          
-                        } else {
-                          return SizedBox();
-                        }
-                      }(),
                     ),
                   ),
               ],
@@ -241,11 +150,6 @@ class _DeviceScreenState extends State<DeviceScreen> {
                   _controller.clear();
                 },
                 child: const Text("Send"),
-              ),
-              SizedBox(width: 16.0),
-              ElevatedButton(
-                onPressed: _clearMessages,
-                child: const Text("Clear"),
               ),
             ],
           ),
