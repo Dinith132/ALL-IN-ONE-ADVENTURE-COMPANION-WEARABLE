@@ -14,10 +14,6 @@ dependencies:
   flutter_blue_classic: ^0.0.4
   flutter_map: ^8.0.0
   latlong2: ^0.9.1
-  sqflite: ^2.0.0+3
-  sqflite_common_ffi: ^2.0.0+1
-  path: ^1.8.0 
-  path_provider: ^2.0.5
   # mbtiles_image_provider: ^0.1.0
 
   # google_maps_flutter: ^2.1.1
@@ -40,4 +36,3 @@ flutter:
   uses-material-design: true
   assets:
     - assets/map.mbtiles
-
