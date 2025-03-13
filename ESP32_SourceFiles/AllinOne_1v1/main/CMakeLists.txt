@@ -1,0 +1,11 @@
+idf_component_register(SRCS "main.c"
+                            "spp_task.c"
+                            "neo6m/neo6m.c"
+				            "max30100/max30100.c"
+				            "max4466/max4466.c"
+				            "oled/oled.c"
+				            "oled/ssd1306.c"
+				            "oled/ssd1306_i2c_legacy.c"
+				            "nRF24L01/mirf.c"
+                    INCLUDE_DIRS "." "neo6m" "max30100" "max4466" "oled" "nRF24L01"
+                    REQUIRES bt driver freertos nvs_flash esp_lcd)
