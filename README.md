@@ -72,18 +72,6 @@ The wearable features a compact and efficient circuit design to integrate all co
 4. [ESP32 Official Documentation](https://docs.espressif.com)
 5. [Arduino Programming Guide](https://www.arduino.cc)
 
----
-
-## Team & Mentors
-
-### Team Members:
-- **Weerasinghe D.K.D**: Software Development and Documentation 
-- **Hettiarachchi H.P.M**: PCB Design and Circuit Design 
-- **Perera W.A.C.D**: PCB Design and Circuit Design 
-- **Wijedasa M.M.D.P**: Software Development and Documentation 
-
-### Mentors:
-- *Nishankar S.*-Lecturer on University of Jaffna 
 
 ---
 
